@@ -19,14 +19,14 @@ const atualizarCalendario = () => {
     let listTag = "";
 
     for (let i = primeiroDiaDoMes; i > 0; i--) {
-        listTag += `<li class="inativo" id="prev${ultimoDiaMesPassado - i + 1}" onclick="selectDay(${ultimoDiaMesPassado - i + 1}, ${mesAtual === 0 ? 12 : mesAtual}, ${mesAtual === 0 ? anoAtual - 1 : anoAtual})">${ultimoDiaMesPassado - i + 1}</li>`;
+        listTag += `<li class="inativo fadeIn" id="prev${ultimoDiaMesPassado - i + 1}" onclick="selectDay(${ultimoDiaMesPassado - i + 1}, ${mesAtual === 0 ? 12 : mesAtual}, ${mesAtual === 0 ? anoAtual - 1 : anoAtual})">${ultimoDiaMesPassado - i + 1}</li>`;
     }
     for (let i = 1; i <= ultimaDataDoMes; i++) {
         let classeDiaAtual = i === data.getDate() && mesAtual === new Date().getMonth() && anoAtual === new Date().getFullYear() ? "diaAtual" : "";
-        listTag += `<li class="${classeDiaAtual}" id="day${i}" onclick="selectDay(${i}, ${mesAtual + 1}, ${anoAtual})">${i}</li>`;
+        listTag += `<li class="${classeDiaAtual} fadeIn" id="day${i}" onclick="selectDay(${i}, ${mesAtual + 1}, ${anoAtual})">${i}</li>`;
     }
     for (let i = ultimoDiaDoMes + 1, dia = 1; i <= 6; i++, dia++) {
-        listTag += `<li class="inativo" id="next${dia}" onclick="selectDay(${dia}, ${mesAtual === 11 ? 1 : mesAtual + 2}, ${mesAtual === 11 ? anoAtual + 1 : anoAtual})">${dia}</li>`;
+        listTag += `<li class="inativo fadeIn" id="next${dia}" onclick="selectDay(${dia}, ${mesAtual === 11 ? 1 : mesAtual + 2}, ${mesAtual === 11 ? anoAtual + 1 : anoAtual})">${dia}</li>`;
     }
     dataAtual.innerHTML = `${meses[mesAtual]} ${anoAtual}`;
     diasTag.innerHTML = listTag;
@@ -55,4 +55,5 @@ passarProximoIcone.forEach(icon => {
 
 function selectDay(dia, mes, ano) {
     document.getElementById('selectDayText').innerHTML = `Dia selecionado: ${dia} / ${mes} / ${ano}`;
+    document.getElementById('selectDayText').className = 'fadeIn'
 }
