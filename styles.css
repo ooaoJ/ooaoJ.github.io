@@ -130,3 +130,14 @@ body{
         transform: scale(0.7);
     }
 }
+.fadeIn{
+    animation: fadeIn 2s ease; 
+}
+@keyframes fadeIn{
+    0%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
