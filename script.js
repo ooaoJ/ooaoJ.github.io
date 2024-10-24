@@ -12,24 +12,31 @@ console.log(anoAtual, mesAtual);
 const meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
 
 const atualizarCalendario = () => {
-    let primeiroDiaDoMes = new Date(anoAtual, mesAtual, 1).getDay(), // primeiro dia do mês atual
-    ultimaDataDoMes = new Date(anoAtual, mesAtual + 1, 0).getDate(), // última data do mês atual
-    ultimoDiaDoMes = new Date(anoAtual, mesAtual, ultimaDataDoMes).getDay(), // último dia do mês atual
-    ultimoDiaMesPassado = new Date(anoAtual, mesAtual, 0).getDate(); // último dia do mês passado
-    let listTag = "";
+    diasTag.classList.add('fadeOut');
 
-    for (let i = primeiroDiaDoMes; i > 0; i--) {
-        listTag += `<li class="inativo fadeIn" id="prev${ultimoDiaMesPassado - i + 1}" onclick="selectDay(${ultimoDiaMesPassado - i + 1}, ${mesAtual === 0 ? 12 : mesAtual}, ${mesAtual === 0 ? anoAtual - 1 : anoAtual})">${ultimoDiaMesPassado - i + 1}</li>`;
-    }
-    for (let i = 1; i <= ultimaDataDoMes; i++) {
-        let classeDiaAtual = i === data.getDate() && mesAtual === new Date().getMonth() && anoAtual === new Date().getFullYear() ? "diaAtual" : "";
-        listTag += `<li class="${classeDiaAtual} fadeIn" id="day${i}" onclick="selectDay(${i}, ${mesAtual + 1}, ${anoAtual})">${i}</li>`;
-    }
-    for (let i = ultimoDiaDoMes + 1, dia = 1; i <= 6; i++, dia++) {
-        listTag += `<li class="inativo fadeIn" id="next${dia}" onclick="selectDay(${dia}, ${mesAtual === 11 ? 1 : mesAtual + 2}, ${mesAtual === 11 ? anoAtual + 1 : anoAtual})">${dia}</li>`;
-    }
-    dataAtual.innerHTML = `${meses[mesAtual]} ${anoAtual}`;
-    diasTag.innerHTML = listTag;
+    setTimeout(() => {
+        let primeiroDiaDoMes = new Date(anoAtual, mesAtual, 1).getDay(),
+        ultimaDataDoMes = new Date(anoAtual, mesAtual + 1, 0).getDate(),
+        ultimoDiaDoMes = new Date(anoAtual, mesAtual, ultimaDataDoMes).getDay(),
+        ultimoDiaMesPassado = new Date(anoAtual, mesAtual, 0).getDate();
+        let listTag = "";
+
+        for (let i = primeiroDiaDoMes; i > 0; i--) {
+            listTag += `<li class="inativo fadeIn" id="prev${ultimoDiaMesPassado - i + 1}" onclick="selectDay(${ultimoDiaMesPassado - i + 1}, ${mesAtual === 0 ? 12 : mesAtual}, ${mesAtual === 0 ? anoAtual - 1 : anoAtual})">${ultimoDiaMesPassado - i + 1}</li>`;
+        }
+        for (let i = 1; i <= ultimaDataDoMes; i++) {
+            let classeDiaAtual = i === data.getDate() && mesAtual === new Date().getMonth() && anoAtual === new Date().getFullYear() ? "diaAtual" : "";
+            listTag += `<li class="${classeDiaAtual} fadeIn" id="day${i}" onclick="selectDay(${i}, ${mesAtual + 1}, ${anoAtual})">${i}</li>`;
+        }
+        for (let i = ultimoDiaDoMes + 1, dia = 1; i <= 6; i++, dia++) {
+            listTag += `<li class="inativo fadeIn" id="next${dia}" onclick="selectDay(${dia}, ${mesAtual === 11 ? 1 : mesAtual + 2}, ${mesAtual === 11 ? anoAtual + 1 : anoAtual})">${dia}</li>`;
+        }
+
+        dataAtual.innerHTML = `${meses[mesAtual]} ${anoAtual}`;
+        diasTag.innerHTML = listTag;
+
+        diasTag.classList.remove('fadeOut');
+    }, 500);
 };
 
 atualizarCalendario();
@@ -56,4 +63,35 @@ passarProximoIcone.forEach(icon => {
 function selectDay(dia, mes, ano) {
     document.getElementById('selectDayText').innerHTML = `Dia selecionado: ${dia} / ${mes} / ${ano}`;
     document.getElementById('selectDayText').className = 'fadeIn'
+}
+
+function openMenu() {
+    let linha1 = document.getElementById('linha1'),
+        linha2 = document.getElementById('linha2'),
+        linha3 = document.getElementById('linha3'),
+        menu = document.getElementById('menu');
+
+    if (menu.classList.contains('menu-aberto')) {
+        menu.classList.remove('menu-aberto');
+        linha1.style.transform = 'rotate(0deg) translateY(0)';
+        linha2.style.opacity = '1';
+        linha3.style.transform = 'rotate(0deg) translateY(0)  translateX(0)';
+    } else {
+        menu.classList.add('menu-aberto');
+        linha1.style.transform = 'rotate(45deg) translateY(12px)';
+        linha2.style.opacity = '0';
+        linha3.style.transform = 'rotate(-45deg) translateY(-15px) translateX(1px)';
+    }
+}
+
+function mudarTema(){
+    let tema = document.getElementById('tema-link');
+    let temaText = document.getElementById('tema');
+    if (tema.href.includes("styles.css")) {
+        tema.href = "whiteMode.css";
+        temaText.innerHTML = 'Tema escuro';
+    } else {
+        tema.href = "styles.css";
+        temaText.innerHTML = 'Tema claro';
+    }
 }
