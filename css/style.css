@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+}
+img{
+    width: 200px;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.root {
+    width: 1200px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+.line{
+    width: 2px;
+    height: 100%;
+    background-color: red;
+}
+.sectop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 100;
+}
+.sectop h1{
+    font-size: 64px;
+    color: rgb(255, 0, 0);
+    width: 500px;
+    text-align: center;
+}
+section{
+    width: 700px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.d1{
+    position: relative;
+    top: -40px;
+    left: 50px;
+
+}
+.d2{
+    position: relative;
+    top: 60px;
+    left: -40px;
+
+}
+.design div{
+    display: flex;
+}
+.hexagono {
+     position: relative;
+    width: 140px;
+    height: 150px;
+    background-color: #ff00002d;
+    margin: 28.87px 0;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+.p1{
+    position: relative;
+    left: 30px;
+    top: 30px;
+}
+.p3{
+    position: relative;
+    left: -30px;
+    top: 30px;
+}
+.p4{
+    position: relative;
+    left: 30px;
+    top: -30px;
+}
+.p6{
+    position: relative;
+    left: -30px;
+    top: -30px;
+}
+.coolinput {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    position: static;
+    width: 440px;
+}
+.coolinput input {
+    width: 100%;
+}
+.coolinput label.text {
+    font-size: 18px;
+    color: #ff0000;
+    font-weight: 700;
+    position: relative;
+    top: 0.5rem;
+    margin: 0 0 0 7px;
+    padding: 0 3px;
+    background: #ffebeb;
+    width: fit-content;
+}
+.coolinput input[type=text].input {
+    padding: 11px 10px;
+    font-size: 16px;
+    border: 2px #ff0000 solid;
+    border-radius: 5px;
+    background: transparent;
+    height: 30px;
+}
+.coolinput input[type=password].input {
+    padding: 11px 10px;
+    font-size: 16px;
+    border: 2px #ff0000 solid;
+    border-radius: 5px;
+    background: transparent;
+    height: 30px;
+}
+.coolinput input[type=text].input:focus {
+    outline: none;
+}
+.coolinput input[type=password].input:focus {
+    outline: none;
+}
+input[type=checkbox]{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid red;  
+    border-radius: 4px;
+}
+input[type="checkbox"]:checked {
+    background-color: red;
+    border-color: red;
+}
+
+input[type="checkbox"]:checked::after {
+    content: '✔';
+    display: block;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    line-height: 18px;
+}
+
+.fade-in{
+    animation: fadeIn 1s ease-out;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(180px);   
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.rememberPassword{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: start;
+}
+.join{
+    width: 150px;
+    height: 46px;
+    font-size: 22px;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+}
+.section2{
+    background-color: #ffebeb;
+    height: 500px;
+    border-radius: 10px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+form input[type = 'button']{
+    cursor: pointer;
+    transition: 0.2s;
+}
+form input[type = 'button']:hover{
+    transform: scale(1.1);
+}
+form input[type = 'button']:active{
+    background-color: #fff;
+    color: red;
+    transition: 0.1s;
+}

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culinária Otimizada - Página 2</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+    <div class="root">
+        <aside>
+            <div class="aside-top">
+                <img src="imgs/logo.png" alt="Logo">
+                <h1>Bem vindo</h1>
+            </div>
+            <span class="linha"></span>
+            <div class="aside-navbar">
+                <div class="icones activeIcon hoverIcon"  id="HomeNav" onclick="openHome()">
+                    <i class="fa-solid fa-house"></i>
+                    <p class="navButton">Home</p>
+                </div>
+                <div class="icones hoverIcon" id="ContagemNav" onclick="openContagem()">
+                    <i class="fa-regular fa-clipboard"></i>
+                    <p class="navButton">Contagem</p>
+                </div>
+                <div class="icones hoverIcon" id="NivelNav" onclick="openNivel()">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <p class="navButton">Nível de Ensino</p>
+                </div>
+                <div class="dropdown">
+                    <span class="linhadropdown"></span>
+                    <div class="dropdownIcon hoverIcon" id="selectFund1">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <p class="navButton dropdownIconTxt">Fundamental I</p>
+                    </div>
+                    <div class="dropdownIcon hoverIcon" id="selectFund2">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <p class="navButton dropdownIconTxt">Fundamental II</p>
+                    </div>
+                    <div class="dropdownIcon hoverIcon" id="selectMedio">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <p class="navButton dropdownIconTxt">Ensino Médio</p>
+                    </div>
+                    <div class="dropdownIcon hoverIcon" id="selectOutros">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <p class="navButton dropdownIconTxt">Outros</p>
+                    </div>
+                </div>
+            </div>
+            <span class="linha"></span>
+            <div class="aside-infos">
+                <div class="hoverIcon">
+                    <i class="fa-regular fa-user"></i>
+                    <p id="nomeUsuario">{usuario}</p>
+                </div>
+                <div class="hoverIcon">
+                    <i class="fa-solid fa-gear"></i>
+                    <p>Configurações</p>
+                </div>
+            </div>
+        </aside>
+        <section id="home" class="cardContent" style="display: flex;">
+            <header>
+                <h1>Realize a contagem agora</h1>
+                <span class="linhaTitle"></span>
+            </header>
+            <main>
+                <div class="mainTop">
+                    <p>Data: <span id="date"></span></p>
+                    <img src="imgs/sesi-logo.png" alt="Sesi Logo" id="logoSesi">
+                </div>
+                <div class="mainContent">
+                    <p>Seja bem-vindo ao Contador de Alunos do SESI, uma ferramenta digital desenvolvida para monitorar, em tempo real, o número de alunos. Este sistema foi criado com o objetivo de oferecer uma visão clara e acessível sobre a quantidade de estudantes no dia, proporcionando praticidade e facilidade de acompanhamento tanto para a administração quanto para os membros da equipe da cozinha.</p>
+                </div>
+            </main>
+            <footer>
+                <div class="info">
+                    <div class="infoCard">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>SESI - Regente Feijó</p>
+                    </div>
+                    <div class="infoCard">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>Contato: codingthefuture.cf@gmail.com</p>
+                    </div>
+
+                </div>
+            </footer>
+        </section>
+        <section id="contagem" class="cardContent" style="display: none;">
+            <header>
+                <h1>Contagens</h1>
+            </header>
+            <main>
+                <div class="mainContent">
+                    <div class="card">
+                        <div>
+                            <p>Contagem</p>
+                        </div>
+                        <div class="cardContador">
+                            <p id="contadorFund">38</p>
+                        </div>
+                        <span class="linhaCard"></span>
+                        <div class="cardTags">
+                            <div class="tag">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                <p>Fundamental I</p>
+                            </div>
+                            <div class="tag">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                <p>Fundamental II</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <p>Contagem</p>
+                        </div>
+                        <div class="cardContador">
+                            <p id="contadorFund">45</p>
+                        </div>
+                        <span class="linhaCard"></span>
+                        <div class="cardTags">
+                            <div class="tag">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                <p>Ensino Médio</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <p>Contagem</p>
+                        </div>
+                        <div class="cardContador">
+                            <p id="contadorFund">31</p>
+                        </div>
+                        <span class="linhaCard"></span>
+                        <div class="cardTags">
+                            <div class="tag">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                <p>Outros</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </section>
+        <section id="nivel" class="cardContent" style="display: none;">
+            <header>
+                <h1>Escolha uma categoria para fazer a contagem</h1>
+            </header>
+            <main>
+                <div class="mainContent separate">
+                    <div class="separateL">
+                        <div class="cardNivel" id="fundamental" onclick="openContagemNivel(this.id)">
+                            <i class="fa-solid fa-graduation-cap" ></i>
+                            <p>Fundamental I</p>
+                        </div>
+                        <div class="cardNivel" id="fundamental2" onclick="openContagemNivel(this.id)">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <p>Fundamental II</p>
+                        </div>
+                    </div>
+                    <div class="separateL">
+                        <div class="cardNivel" id="ensinomedio" onclick="openContagemNivel(this.id)">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <p>Ensino Médio</p>
+                        </div>
+                        <div class="cardNivel" id="outros" onclick="openContagemNivel(this.id)">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <p>Outros</p>
+                        </div>                     
+                    </div>
+                </div>
+                <p>Selecione uma das opções acima para abrir os painéis de contagem e seus respectivos relatórios.</p>
+            </main>
+        </section>
+        <section id="fund1" class="cardContent" style="display: none;">
+            <h1>Fundamental I</h1>
+            <h3>Selecione uma turma para fazer uma contagem</h3>
+            <div class="separate">
+                <div class="cardNivel cardTurma" id="primeiroAno">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <p>Primeiro Ano</p>
+                </div>
+                <div class="cardNivel cardTurma" id="segundoAno">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <p>Segundo Ano</p>
+                </div>
+                <div class="cardNivel cardTurma" id="terceiroAno">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <p>Terceiro Ano</p>
+                </div>
+                <div class="cardNivel cardTurma" id="quartoAno">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <p>Quarto Ano</p>
+                </div>
+                <div class="cardNivel cardTurma" id="quintoAno">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <p>Quinto Ano</p>
+                </div>
+            </div>
+        </section>
+        <section id="fund2" class="cardContent" style="display: none;">
+            <h1>Fundamental II</h1>
+            <h3>Selecione uma turma para fazer uma contagem</h3>
+            <div class="separate">
+                <div class="cardNivel cardTurma" id="sextoAno">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <p>Sexto Ano</p>
+                </div>
+                <div class="cardNivel cardTurma" id="setimoAno">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <p>Sétimo Ano</p>
+                </div>
+                <div class="cardNivel cardTurma" id="oitavoAno">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <p>Oitavo Ano</p>
+                </div>
+                <div class="cardNivel cardTurma" id="oitavoAno">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <p>Nono Ano</p>
+                </div>
+            </div>
+        </section>
+        <section id="ensinomedioCard" class="cardContent" style="display: none;">
+            <h1>Ensino Médio</h1>
+            <h3>Selecione uma turma para fazer uma contagem</h3>
+            <div class="separate">
+                <div class="cardNivel cardTurma" id="primeiroMedio">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <p>Primeiro Médio</p>
+                </div>
+                <div class="cardNivel cardTurma" id="segundoMedio">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <p>Segundo Médio</p>
+                </div>
+                <div class="cardNivel cardTurma" id="terceiroMedio">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <p>Terceiro Médio</p>
+                </div>
+            </div>   
+        </section>
+        <section id="outrosCard" class="cardContent" style="display: none;">
+            <h1>Outros</h1>
+            <h3>Selecione uma turma para fazer uma contagem</h3>
+            <div class="separate">
+                <div class="cardNivel cardTurma" id="arduino">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <p>Arduino</p>
+                </div>
+                <div class="cardNivel cardTurma" id="senai">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <p>Senai</p>
+                </div>
+                <div class="cardNivel cardTurma" id="cacaAsteroide">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <p>Caça Asteroide</p>
+                </div>
+                <div class="cardNivel cardTurma" id="personaliza">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <p>Personaliza</p>
+                </div>
+                <div class="cardNivel cardTurma" id="autorizados">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <p>Autorizados</p>
+                </div>
+                <div class="cardNivel cardTurma" id="paraGabaritar">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <p>Para Gabaritar</p>
+                </div>
+                <div class="cardNivel cardTurma" id="robotica">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <p>Robótica</p>
+                </div>
+                <div class="cardNivel cardTurma" id="TRI">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <p>TRI</p>
+                </div>
+                <div class="cardNivel cardTurma" id="topicoAvancado">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <p>Tópico Avançado</p>
+                </div>
+                <div class="cardNivel cardTurma" id="praticasInvestigativas">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <p>Práticas Investigativas</p>
+                </div>
+            </div>   
+        </section>
+        <section id="userPainel" class="cardContent" style="display: none;">
+            <h1 id="cardUsername"></h1>
+        </section>
+
+        <div class="modal" style="display: none;">
+            
+        </div>
+    </div>
+    <script src="js/date.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

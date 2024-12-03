@@ -1,0 +1,309 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    list-style: none;
+    text-decoration: none;
+    color: #333;
+}
+img {
+    width: 95px;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.root{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+#home,
+#contagem,
+#nivel,
+#fund1,
+#fund2,
+#ensinomedioCard,
+#outrosCard{
+    width: 100%;
+}
+
+aside {
+    height: 100%;
+    min-width: 280px;
+    background-color: #ffebeb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.aside-top {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: red;
+    font-size: 22px;
+}
+.linha{
+    width: 100%;
+    height: 2px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: red;
+}
+.aside-navbar{
+    margin-top: 50px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    gap: 20px;
+}
+.icones{
+    width: auto;
+    height: 30px;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.dropdown{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 40px;
+    font-size: 18px;    
+}
+.dropdown .dropdownIcon{
+    width: 150px;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    gap: 5px;
+    background-color: #6666664f;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.activeIcon{
+    background-color: rgba(255, 0, 0, 0.322) !important;
+}
+.linhaVertical{
+    width: 3px;
+    height: 290px;
+    background-color: #6666664f;
+    position: relative;
+    top: 350px;
+    left: 3%;
+}
+.aside-infos{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.aside-infos div{
+    width: 70%;
+    height: 30px;
+    border-radius: 10px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    gap: 10px;
+    font-size: 20px;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+section header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 24px;
+}
+section main{
+    width: 70%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    font-size: 22px;
+}
+.linhaTitle{
+    width: 200px;
+    height: 2px;
+    background-color: red;
+}
+.linhadropdown{
+    width: 3px;
+    height: 280px;
+    background-color: #6666664f;
+    position: absolute;
+    left: 60px;
+}
+section main .mainTop{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+}
+#logoSesi{
+    width: 150px;
+}
+section footer{
+    width: 70%;
+    height: 250px;
+    font-size: 22px;
+}
+.info{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.infoCard{
+    width: 100%;
+    height: 20px;
+    border-radius: 10px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+
+}
+.infoCard i{
+    font-size: 42px;
+    color: red;
+}
+.mainContent{
+    margin-top: 30px;
+}
+.hoverIcon:hover{
+    transform: scale(1.05);
+    background-color: #6666664f;
+    transition: 0.5s;
+    cursor: pointer;
+}
+#contagem main{
+    width: 90%;
+    height: auto;
+}
+#contagem .mainContent{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.mainContent .card{
+    padding-top: 5px;
+    width: 320px;
+    height: 550px;
+    background-color: #ffebeb;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+.card .cardContador{
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+    background-color: #ff313136;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cardContador p{
+    font-size: 28px;
+}
+.linhaCard{
+    width: 100%;
+    height: 3px;
+    background-color: red;
+}
+.cardTags{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.cardTags .tag{
+    width: 200px;
+    height: 40px;
+    background-color: rgba(196, 196, 196, 0.699);
+    border-radius: 40px;
+    display: flex;
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.separate{
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+}
+.separate .separateL{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+.cardNivel{
+    display: flex;
+    gap: 5px;
+    width: 300px;   
+    height: 40px;
+    padding: 10px;
+    background-color: #6666664f;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+#nivel main{
+    height: 500px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#nivel main>p{
+    margin-top: 100px;
+    width: 600px;
+    text-align: center;
+}
+.cardNivel:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+    cursor: pointer;
+}
+#fund1, #fund2, #ensinomedioCard, #outrosCard{
+    font-size: 22px;
+}
+.separate{
+    margin-top: 50px;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
