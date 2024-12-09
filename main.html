@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 <body>
-    <div class="root">
-        <aside>
+    <div class="root">  
+        <aside id="menu">
             <div class="aside-top">
                 <img src="imgs/logo.png" alt="Logo">
                 <h1>Bem vindo</h1>
@@ -60,6 +60,9 @@
                 </div>
             </div>
         </aside>
+        <span id="menu-hamburguer" onclick="openMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </span>
         <section id="home" class="cardContent" style="display: flex;">
             <header>
                 <h1>Realize a contagem agora</h1>
@@ -77,8 +80,10 @@
             <footer>
                 <div class="info">
                     <div class="infoCard">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <p>SESI - Regente Feijó</p>
+                        <a href="https://www.google.com.br/maps/place/Escola+Sesi+de+Regente+Feijó+-+CE+368/@-22.228716,-51.3188738,17.25z/data=!4m6!3m5!1s0x949475d0750b1b3d:0x86a2c97c517c8093!8m2!3d-22.2292274!4d-51.3158903!16s%2Fg%2F11b7swf008?entry=ttu&g_ep=EgoyMDI0MTIwMi4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <p>SESI - Regente Feijó</p>
+                        </a>
                     </div>
                     <div class="infoCard">
                         <i class="fa-solid fa-phone"></i>
@@ -91,6 +96,7 @@
         <section id="contagem" class="cardContent" style="display: none;">
             <header>
                 <h1>Contagens</h1>
+                <p>Data: <span id="date2"></span></p>
             </header>
             <main>
                 <div class="mainContent">
@@ -99,7 +105,7 @@
                             <p>Contagem</p>
                         </div>
                         <div class="cardContador">
-                            <p id="contadorFund">38</p>
+                            <p id="contadorFund"></p>
                         </div>
                         <span class="linhaCard"></span>
                         <div class="cardTags">
@@ -118,7 +124,7 @@
                             <p>Contagem</p>
                         </div>
                         <div class="cardContador">
-                            <p id="contadorFund">45</p>
+                            <p id="contadorMedio"></p>
                         </div>
                         <span class="linhaCard"></span>
                         <div class="cardTags">
@@ -133,7 +139,7 @@
                             <p>Contagem</p>
                         </div>
                         <div class="cardContador">
-                            <p id="contadorFund">31</p>
+                            <p id="contadorOutros"></p>
                         </div>
                         <span class="linhaCard"></span>
                         <div class="cardTags">
@@ -180,23 +186,23 @@
             <h1>Fundamental I</h1>
             <h3>Selecione uma turma para fazer uma contagem</h3>
             <div class="separate">
-                <div class="cardNivel cardTurma" id="primeiroAno">
+                <div class="cardNivel cardTurma" id="PrimeiroAno">
                     <i class="fa-solid fa-graduation-cap"></i>
                     <p>Primeiro Ano</p>
                 </div>
-                <div class="cardNivel cardTurma" id="segundoAno">
+                <div class="cardNivel cardTurma" id="SegundoAno">
                     <i class="fa-solid fa-graduation-cap"></i>
                     <p>Segundo Ano</p>
                 </div>
-                <div class="cardNivel cardTurma" id="terceiroAno">
+                <div class="cardNivel cardTurma" id="TerceiroAno">
                     <i class="fa-solid fa-graduation-cap"></i>
                     <p>Terceiro Ano</p>
                 </div>
-                <div class="cardNivel cardTurma" id="quartoAno">
+                <div class="cardNivel cardTurma" id="QuartoAno">
                     <i class="fa-solid fa-graduation-cap"></i>
                     <p>Quarto Ano</p>
                 </div>
-                <div class="cardNivel cardTurma" id="quintoAno">
+                <div class="cardNivel cardTurma" id="QuintoAno">
                     <i class="fa-solid fa-graduation-cap"></i>
                     <p>Quinto Ano</p>
                 </div>
@@ -206,19 +212,19 @@
             <h1>Fundamental II</h1>
             <h3>Selecione uma turma para fazer uma contagem</h3>
             <div class="separate">
-                <div class="cardNivel cardTurma" id="sextoAno">
+                <div class="cardNivel cardTurma" id="SextoAno">
                     <i class="fa-solid fa-graduation-cap"></i>
                     <p>Sexto Ano</p>
                 </div>
-                <div class="cardNivel cardTurma" id="setimoAno">
+                <div class="cardNivel cardTurma" id="SetimoAno">
                     <i class="fa-solid fa-graduation-cap"></i>
                     <p>Sétimo Ano</p>
                 </div>
-                <div class="cardNivel cardTurma" id="oitavoAno">
+                <div class="cardNivel cardTurma" id="OitavoAno">
                     <i class="fa-solid fa-graduation-cap"></i>
                     <p>Oitavo Ano</p>
                 </div>
-                <div class="cardNivel cardTurma" id="oitavoAno">
+                <div class="cardNivel cardTurma" id="OitavoAno">
                     <i class="fa-solid fa-graduation-cap"></i>
                     <p>Nono Ano</p>
                 </div>
@@ -228,15 +234,15 @@
             <h1>Ensino Médio</h1>
             <h3>Selecione uma turma para fazer uma contagem</h3>
             <div class="separate">
-                <div class="cardNivel cardTurma" id="primeiroMedio">
+                <div class="cardNivel cardTurma" id="PrimeiroMedio">
                     <i class="fa-solid fa-graduation-cap"></i>
                     <p>Primeiro Médio</p>
                 </div>
-                <div class="cardNivel cardTurma" id="segundoMedio">
+                <div class="cardNivel cardTurma" id="SegundoMedio">
                     <i class="fa-solid fa-graduation-cap"></i>
                     <p>Segundo Médio</p>
                 </div>
-                <div class="cardNivel cardTurma" id="terceiroMedio">
+                <div class="cardNivel cardTurma" id="TerceiroMedio">
                     <i class="fa-solid fa-graduation-cap"></i>
                     <p>Terceiro Médio</p>
                 </div>
@@ -246,31 +252,31 @@
             <h1>Outros</h1>
             <h3>Selecione uma turma para fazer uma contagem</h3>
             <div class="separate">
-                <div class="cardNivel cardTurma" id="arduino">
+                <div class="cardNivel cardTurma" id="Arduino">
                     <i class="fa-solid fa-graduation-cap"></i>
                     <p>Arduino</p>
                 </div>
-                <div class="cardNivel cardTurma" id="senai">
+                <div class="cardNivel cardTurma" id="Senai">
                     <i class="fa-solid fa-graduation-cap"></i>
                     <p>Senai</p>
                 </div>
-                <div class="cardNivel cardTurma" id="cacaAsteroide">
+                <div class="cardNivel cardTurma" id="CacaAsteroide">
                     <i class="fa-solid fa-graduation-cap"></i>
                     <p>Caça Asteroide</p>
                 </div>
-                <div class="cardNivel cardTurma" id="personaliza">
+                <div class="cardNivel cardTurma" id="Personaliza">
                     <i class="fa-solid fa-graduation-cap"></i>
                     <p>Personaliza</p>
                 </div>
-                <div class="cardNivel cardTurma" id="autorizados">
+                <div class="cardNivel cardTurma" id="Autorizados">
                     <i class="fa-solid fa-graduation-cap"></i>
                     <p>Autorizados</p>
                 </div>
-                <div class="cardNivel cardTurma" id="paraGabaritar">
+                <div class="cardNivel cardTurma" id="ParaGabaritar">
                     <i class="fa-solid fa-graduation-cap"></i>
                     <p>Para Gabaritar</p>
                 </div>
-                <div class="cardNivel cardTurma" id="robotica">
+                <div class="cardNivel cardTurma" id="Robotica">
                     <i class="fa-solid fa-graduation-cap"></i>
                     <p>Robótica</p>
                 </div>
@@ -278,11 +284,11 @@
                     <i class="fa-solid fa-graduation-cap"></i>
                     <p>TRI</p>
                 </div>
-                <div class="cardNivel cardTurma" id="topicoAvancado">
+                <div class="cardNivel cardTurma" id="TopicoAvancado">
                     <i class="fa-solid fa-graduation-cap"></i>
                     <p>Tópico Avançado</p>
                 </div>
-                <div class="cardNivel cardTurma" id="praticasInvestigativas">
+                <div class="cardNivel cardTurma" id="PraticasInvestigativas">
                     <i class="fa-solid fa-graduation-cap"></i>
                     <p>Práticas Investigativas</p>
                 </div>
@@ -291,12 +297,20 @@
         <section id="userPainel" class="cardContent" style="display: none;">
             <h1 id="cardUsername"></h1>
         </section>
-
-        <div class="modal" style="display: none;">
-            
-        </div>
+        <dialog id="cardContagem">
+            <h1 id="nomeTurma"></h1>
+            <span id="closeDialog">
+                <i class="fa-solid fa-xmark"></i>
+            </span>
+            <div class="fundo">
+                <input type="number" id="numContagem">
+            </div>
+            <button id="sendContagem">Confirmar</button>
+        </dialog>
     </div>
+    <script src="js/response.js" defer></script>
     <script src="js/date.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/updateCount.js"></script>
 </body>
 </html>
