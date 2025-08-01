@@ -24,7 +24,7 @@ body{
     z-index: 2;
 }
 .content{
-    width: 35%;
+    width: 100%;
     min-height: 100%;
     height: auto;
     z-index: 100;
@@ -38,6 +38,7 @@ img{
     user-select: none;
 }
 .contentHeader{
+    width: 100%;
     margin-top: 50px;
     margin-bottom: 50px;
     display: flex;
@@ -150,32 +151,33 @@ img{
 .techWordPress {
     order: 0;
 }
+
 .techCard:nth-child(1){
-    background-color: rgba(255, 94, 0, 0.192);
+    background-color: rgba(240, 79, 51, 0.5);
 }
 .techCard:nth-child(1) i{
-    color: orange;
+    color: #f05033;
     font-size: 22px;
 }
 .techCard:nth-child(2){
-    background-color: rgba(0, 102, 255, 0.192);
+    background-color: rgba(119, 123, 179, 0.5);
 }
 .techCard:nth-child(2) i{
-    color: rgb(0, 110, 255);
+    color: #2c3aff;
     font-size: 22px;
 }
 .techCard:nth-child(3){
-    background-color: rgba(255, 217, 0, 0.192);
+    background-color: rgba(245, 48, 3, 0.5);
 }
 .techCard:nth-child(3) i{
-    color: rgb(255, 208, 0);
+    color: red;
     font-size: 22px;
 }
 .techCard:nth-child(4){
-    background-color: rgba(119, 81, 255, 0.192);
+    background-color: rgba(247, 222, 30, 0.5)
 }
 .techCard:nth-child(4) i{
-    color: rgb(78, 70, 197);
+    color: #f7df1e;
     font-size: 25px;
 }
 .techCard:nth-child(5){
@@ -186,18 +188,25 @@ img{
     font-size: 25px;
 }
 .techCard:nth-child(6){
-    background-color: rgba(241, 2, 2, 0.192);
+    background-color: rgba(2, 121, 241, 0.4);
 }
 .techCard:nth-child(6) i{
-    color: rgb(255, 118, 118);
+    color: rgb(118, 177, 255);
     font-size: 25px;
 }
 .techCard:nth-child(7){
-    background-color: rgba(255, 82, 82, 0.192);
+    background-color: rgba(163, 102, 237, 0.5);
 }
 .techCard:nth-child(7) i{
-    color: rgb(68, 163, 252);
+    color: #7711f7;
     font-size: 25px;
+}
+.techCard:nth-child(8){
+    background-color: rgba(255, 255, 255, 0.442);
+}
+.techCard:nth-child(8) i{
+    color: hsl(0, 0%, 0%);
+    font-size: 22px;
 }
 .projects{
     margin-top: 50px;
@@ -238,11 +247,6 @@ img{
     transition: 0.4s;
     cursor: pointer;
 }
-.cardProject>div:nth-child(1):hover{
-    opacity: 0.6;
-    transition: 0.4s;
-    cursor: pointer;
-}
 .cardProject>div:nth-child(2){
     opacity: 0.6;
 }
@@ -259,7 +263,7 @@ img{
     font-size: 18px;
 }
 .formationCard{
-    width: 83%;
+    width: 90%;
     height: 100px;
     border-radius: 10px;
     border: 1px solid #ffffff1e;
@@ -324,11 +328,14 @@ footer{
     }
     .projects{
         display: flex;
-        flex-direction: column;
+        /* flex-direction: column; */
     }
     .projects>div:nth-child(2){
         display: flex;
-        flex-direction: column;
+        /* flex-direction: column;  */
+    }
+    .projects div .cardProject{
+        width: 80% !important;
     }
 }
 @media (max-width: 1175px) {
