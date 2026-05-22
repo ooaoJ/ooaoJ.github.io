@@ -85,6 +85,7 @@ header{
   flex-direction:column;
   gap:1.5rem;
   max-width:700px;
+  margin-top: 120px;
 }
 
 .tag{
