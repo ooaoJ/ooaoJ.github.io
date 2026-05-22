@@ -1,398 +1,238 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>João Sperandio | Backend Developer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+
+  <link rel="stylesheet" href="style.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
   />
-
-  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <div class="background-grid"></div>
-  <div class="red-blur red-blur-1"></div>
-  <div class="red-blur red-blur-2"></div>
+  <nav>
+    <div class="container nav-content">
 
-  <div class="container">
+      <h2 class="logo">
+        João<span>.</span>
+      </h2>
 
-    <!-- SIDEBAR -->
-
-    <aside class="sidebar">
-
-      <div class="logo">
-        <i class="fa-brands fa-laravel"></i>
+      <div class="links">
+        <a href="#about">Sobre</a>
+        <a href="#stack">Stacks</a>
+        <a href="#projects">Projetos</a>
+        <a href="#contact">Contato</a>
       </div>
 
-      <div class="profile">
+    </div>
+  </nav>
 
-        <div class="profile-image">
-          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop" alt="">
-        </div>
+  <header>
+    <div class="container hero">
 
-        <h1>João Sperandio</h1>
-        <span>Backend Developer</span>
-
-        <p>
-          Construindo aplicações web escaláveis
-          com Laravel e tecnologias modernas.
-        </p>
-
+      <div class="tag">
+        <i class="fa-solid fa-code"></i>
+        Backend Developer • Laravel
       </div>
 
-      <div class="socials">
+      <h1>
+        Desenvolvendo aplicações modernas com
+        <span>Laravel</span>
+      </h1>
 
-        <a href="#">
-          <i class="fa-brands fa-github"></i>
+      <p>
+        Desenvolvedor focado em backend, APIs e sistemas modernos.
+      </p>
+
+      <div class="buttons">
+
+        <a href="#projects" class="btn primary">
+          <i class="fa-solid fa-layer-group"></i>
+          Projetos
         </a>
 
-        <a href="#">
-          <i class="fa-brands fa-linkedin-in"></i>
-        </a>
-
-        <a href="#">
-          <i class="fa-regular fa-envelope"></i>
+        <a href="#contact" class="btn secondary">
+          <i class="fa-solid fa-envelope"></i>
+          Contato
         </a>
 
       </div>
 
-      <div class="infos">
+    </div>
+  </header>
 
-        <div class="info-item">
-          <i class="fa-solid fa-location-dot"></i>
-          <span>Presidente Prudente, SP</span>
+  <section id="about">
+    <div class="container">
+
+      <h2 class="title">
+        Sobre <span>mim</span>
+      </h2>
+
+      <p class="about-text">
+        Sou um desenvolvedor apaixonado por backend e arquitetura web,
+        criando sistemas modernos com Laravel, Vue.js e JavaScript.
+      </p>
+
+    </div>
+  </section>
+
+  <section id="stack">
+    <div class="container">
+
+      <h2 class="title">
+        Minhas <span>Stacks</span>
+      </h2>
+
+      <div class="grid">
+
+        <div class="card">
+          <i class="fa-brands fa-laravel"></i>
+          Laravel
         </div>
 
-        <div class="info-item">
-          <i class="fa-regular fa-clock"></i>
-          <span id="clock">00:00 UTC -03:00</span>
+        <div class="card">
+          <i class="fa-brands fa-php"></i>
+          PHP
         </div>
 
-        <div class="info-item">
-          <i class="fa-brands fa-instagram"></i>
-          <span>_jaoooh</span>
+        <div class="card">
+          <i class="fa-brands fa-vuejs"></i>
+          Vue.js
         </div>
 
-        <div class="info-item">
-          <i class="fa-brands fa-github"></i>
-          <span>github.com/ooaoJ</span>
+        <div class="card">
+          <i class="fa-brands fa-js"></i>
+          JavaScript
         </div>
 
-        <div class="info-item">
-          <i class="fa-brands fa-linkedin"></i>
-          <span>in/joaosperandio</span>
+        <div class="card">
+          <i class="fa-solid fa-database"></i>
+          MySQL
+        </div>
+
+        <div class="card">
+          <i class="fa-brands fa-git-alt"></i>
+          Git
         </div>
 
       </div>
 
-      <button class="resume-btn">
-        <i class="fa-solid fa-download"></i>
-        Baixar Currículo
-      </button>
+    </div>
+  </section>
 
-    </aside>
+  <section id="projects">
+    <div class="container">
 
-    <!-- MAIN -->
+      <h2 class="title">
+        Projetos <span>Recentes</span>
+      </h2>
 
-    <main class="content">
+      <div class="projects">
 
-      <!-- NAV -->
+        <div class="project">
+          <i class="fa-solid fa-newspaper"></i>
 
-      <nav class="navbar">
-
-        <div class="nav-links">
-          <a class="active" href="#">Início</a>
-          <a href="#">Sobre</a>
-          <a href="#">Projetos</a>
-          <a href="#">Stack</a>
-          <a href="#">Contato</a>
-        </div>
-
-        <button class="language">
-          🇧🇷 PT
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-
-      </nav>
-
-      <!-- HERO -->
-
-      <section class="hero">
-
-        <div class="hero-content">
-
-          <span class="hero-tag">
-            Olá, eu sou o João 👋
-          </span>
-
-          <h2>
-            Desenvolvedor Backend
-            especialista em <span>Laravel</span>
-          </h2>
+          <h3>Painel de Notícias</h3>
 
           <p>
-            Transformo ideias em aplicações robustas,
-            seguras e escaláveis.
-            Apaixonado por código limpo, performance
-            e boas práticas.
+            Sistema administrativo com autenticação e aprovação de conteúdo.
           </p>
-
-          <div class="hero-buttons">
-
-            <button class="primary-btn">
-              <i class="fa-regular fa-folder"></i>
-              Ver Projetos
-            </button>
-
-            <button class="secondary-btn">
-              <i class="fa-regular fa-paper-plane"></i>
-              Entrar em Contato
-            </button>
-
-          </div>
-
         </div>
 
-        <div class="hero-logo">
-          <i class="fa-brands fa-laravel"></i>
+        <div class="project">
+          <i class="fa-solid fa-city"></i>
+
+          <h3>Cities Resources</h3>
+
+          <p>
+            Projeto para explorar conceitos de backend e arquitetura.
+          </p>
         </div>
 
-      </section>
+        <div class="project">
+          <i class="fa-solid fa-gamepad"></i>
 
-      <!-- ABOUT -->
+          <h3>Quiz Vue.js</h3>
 
-      <section class="section">
-
-        <div class="section-title">
-          <span class="dot"></span>
-          <h3>Sobre</h3>
+          <p>
+            Aplicação consumindo APIs externas com interface dinâmica.
+          </p>
         </div>
 
-        <div class="about-wrapper">
+      </div>
 
-          <div class="about-text">
-            <p>
-              Sou desenvolvedor focado em backend e aplicações web.
-              Tenho experiência com Laravel, MySQL, Vue.js e outras
-              tecnologias do ecossistema web.
-            </p>
+    </div>
+  </section>
 
-            <p>
-              Gosto de resolver problemas, aprender coisas novas
-              e construir projetos que fazem a diferença.
-            </p>
-          </div>
+  <section id="contact">
+    <div class="container">
 
-          <div class="about-cards">
+      <h2 class="title">
+        Entre em <span>Contato</span>
+      </h2>
 
-            <div class="mini-card">
-              <i class="fa-solid fa-bullseye"></i>
+      <div class="contact-box">
 
-              <div>
-                <strong>Focado em Resultados</strong>
-                <span>Código limpo, performance e escalabilidade.</span>
-              </div>
-            </div>
+        <a href="#" class="contact-item">
+          <i class="fa-brands fa-github"></i>
+          GitHub
+        </a>
 
-            <div class="mini-card">
-              <i class="fa-solid fa-book-open"></i>
+        <a href="#" class="contact-item">
+          <i class="fa-brands fa-linkedin"></i>
+          LinkedIn
+        </a>
 
-              <div>
-                <strong>Sempre Aprendendo</strong>
-                <span>Estudando novas tecnologias constantemente.</span>
-              </div>
-            </div>
+        <a href="#" class="contact-item">
+          <i class="fa-brands fa-instagram"></i>
+          Instagram
+        </a>
 
-            <div class="mini-card">
-              <i class="fa-solid fa-code"></i>
+        <a href="#" class="contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          Email
+        </a>
 
-              <div>
-                <strong>Desenvolvedor Completo</strong>
-                <span>Do backend ao frontend, do banco à interface.</span>
-              </div>
-            </div>
+      </div>
 
-          </div>
+    </div>
+  </section>
 
-        </div>
+  <footer>
+    <div class="container footer-content">
 
-      </section>
+      <p>
+        © 2026 João. Todos os direitos reservados.
+      </p>
 
-      <!-- PROJECTS -->
+      <div class="footer-icons">
 
-      <section class="section">
+        <a href="#">
+          <i class="fa-brands fa-github"></i>
+        </a>
 
-        <div class="projects-header">
+        <a href="#">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
 
-          <div class="section-title">
-            <span class="dot"></span>
-            <h3>Projetos</h3>
-          </div>
+        <a href="#">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
 
-          <a href="#" class="github-link">
-            Ver todos no GitHub
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          </a>
+      </div>
 
-        </div>
-
-        <div class="projects-grid">
-
-          <div class="project-card">
-
-            <div class="project-icon">
-              <i class="fa-regular fa-newspaper"></i>
-            </div>
-
-            <h4>Painel de Notícias</h4>
-
-            <span class="tag">Laravel</span>
-
-            <p>
-              Sistema com autenticação, gerenciamento
-              de matérias e aprovação de conteúdo.
-            </p>
-
-            <div class="project-links">
-              <a href="#">Ver Projeto</a>
-              <a href="#">GitHub</a>
-            </div>
-
-          </div>
-
-          <div class="project-card">
-
-            <div class="project-icon">
-              <i class="fa-solid fa-question"></i>
-            </div>
-
-            <h4>Quiz Vue.js</h4>
-
-            <span class="tag">Vue.js</span>
-
-            <p>
-              Aplicação consumindo API externa com
-              sistema de pontuação e perguntas dinâmicas.
-            </p>
-
-            <div class="project-links">
-              <a href="#">Ver Projeto</a>
-              <a href="#">GitHub</a>
-            </div>
-
-          </div>
-
-          <div class="project-card">
-
-            <div class="project-icon">
-              <i class="fa-solid fa-gamepad"></i>
-            </div>
-
-            <h4>Projeto Roblox</h4>
-
-            <span class="tag">Lua</span>
-
-            <p>
-              Desenvolvimento de interfaces e sistemas
-              interativos no Roblox Studio.
-            </p>
-
-            <div class="project-links">
-              <a href="#">Ver Projeto</a>
-              <a href="#">GitHub</a>
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      <!-- STACK -->
-
-      <section class="section">
-
-        <div class="section-title">
-          <span class="dot"></span>
-          <h3>Stack</h3>
-        </div>
-
-        <div class="stack-grid">
-
-          <div class="stack-item active-stack">
-            <i class="fa-brands fa-laravel"></i>
-            <span>Laravel</span>
-          </div>
-
-          <div class="stack-item">
-            <i class="fa-brands fa-php"></i>
-            <span>PHP</span>
-          </div>
-
-          <div class="stack-item">
-            <i class="fa-brands fa-vuejs"></i>
-            <span>Vue.js</span>
-          </div>
-
-          <div class="stack-item">
-            <i class="fa-brands fa-js"></i>
-            <span>JavaScript</span>
-          </div>
-
-          <div class="stack-item">
-            <i class="fa-solid fa-database"></i>
-            <span>MySQL</span>
-          </div>
-
-          <div class="stack-item">
-            <i class="fa-brands fa-git-alt"></i>
-            <span>Git</span>
-          </div>
-
-          <div class="stack-item">
-            <i class="fa-solid fa-wind"></i>
-            <span>Tailwind</span>
-          </div>
-
-          <div class="stack-item">
-            <i class="fa-brands fa-html5"></i>
-            <span>HTML5</span>
-          </div>
-
-          <div class="stack-item">
-            <i class="fa-brands fa-css3-alt"></i>
-            <span>CSS3</span>
-          </div>
-
-        </div>
-
-      </section>
-
-      <footer>
-        <p>
-          <i class="fa-regular fa-heart"></i>
-          Feito com paixão por João Sperandio
-        </p>
-
-        <span>
-          © 2025 Todos os direitos reservados.
-        </span>
-      </footer>
-
-    </main>
-
-  </div>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
-
 </body>
 </html>

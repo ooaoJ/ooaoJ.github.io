@@ -1,77 +1,26 @@
-// script.js
+const cards = document.querySelectorAll(
+  '.card, .project, .contact-item'
+)
 
-function updateClock() {
-  const now = new Date()
+cards.forEach(card => {
 
-  const hours = String(now.getHours()).padStart(2, '0')
-  const minutes = String(now.getMinutes()).padStart(2, '0')
+  card.addEventListener('mousemove', e => {
 
-  document.getElementById(
-    'clock'
-  ).textContent = `${hours}:${minutes} UTC -03:00`
-}
-
-setInterval(updateClock, 1000)
-
-updateClock()
-
-// hover glow nas stacks
-
-const stackItems = document.querySelectorAll('.stack-item')
-
-stackItems.forEach(item => {
-
-  item.addEventListener('mousemove', e => {
-
-    const rect = item.getBoundingClientRect()
+    const rect = card.getBoundingClientRect()
 
     const x = e.clientX - rect.left
     const y = e.clientY - rect.top
 
-    item.style.background = `
+    card.style.background = `
       radial-gradient(
-        circle at ${x}px ${y}px,
-        rgba(255,60,50,0.18),
-        rgba(255,255,255,0.02)
-      )
+      circle at ${x}px ${y}px,
+      rgba(255,45,32,.15),
+      #111114 55%)
     `
   })
 
-  item.addEventListener('mouseleave', () => {
-    item.style.background = 'rgba(255,255,255,0.02)'
+  card.addEventListener('mouseleave', () => {
+    card.style.background = '#111114'
   })
-
-})
-
-// animação reveal
-
-const revealElements = document.querySelectorAll(
-  '.project-card, .mini-card, .stack-item'
-)
-
-const observer = new IntersectionObserver(entries => {
-
-  entries.forEach(entry => {
-
-    if(entry.isIntersecting){
-
-      entry.target.style.opacity = 1
-      entry.target.style.transform = 'translateY(0px)'
-
-    }
-
-  })
-
-}, {
-  threshold:0.1
-})
-
-revealElements.forEach(el => {
-
-  el.style.opacity = 0
-  el.style.transform = 'translateY(40px)'
-  el.style.transition = '.6s ease'
-
-  observer.observe(el)
 
 })
