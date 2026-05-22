@@ -1,180 +1,398 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>João Pedro | Desenvolvedor Fullstack</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>João Sperandio | Backend Developer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <header class="header">
-        <div class="header-content container">
-            <a href="#" class="logo">JP Dev.</a>
-            
-            <nav class="nav" aria-label="Navegação Principal">
-                <a href="#hero">Sobre</a>
-                <a href="#skills">Habilidades</a>
-                <a href="#projects">Projetos</a>
-                <a href="#contact" class="cta-button">Contato</a>
-            </nav>
+  <div class="background-grid"></div>
+  <div class="red-blur red-blur-1"></div>
+  <div class="red-blur red-blur-2"></div>
+
+  <div class="container">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+      <div class="logo">
+        <i class="fa-brands fa-laravel"></i>
+      </div>
+
+      <div class="profile">
+
+        <div class="profile-image">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop" alt="">
         </div>
-    </header>
 
-    <main>
-        <section id="hero" class="hero container">
-            <div class="hero-text">
-                <p class="subtitle">Olá, eu sou</p>
-                <h1>João Pedro</h1>
-                <h2 class="fullstack-title">Desenvolvedor <span class="accent">Fullstack</span></h2>
-                <p class="description">
-                    Construo soluções web completas, do banco de dados (Backend robusto e seguro) à interface do usuário (Frontend moderno e intuitivo). Especializado em transformar ideias em produtos digitais de alta performance.
-                </p>
-                <div class="hero-actions">
-                    <a href="#projects" class="button primary">Ver Projetos</a>
-                    <a href="https://wa.me/SEU_NUMERO" target="_blank" class="button secondary">
-                        <i class="fa-brands fa-whatsapp"></i> Conversar
-                    </a>
-                </div>
+        <h1>João Sperandio</h1>
+        <span>Backend Developer</span>
+
+        <p>
+          Construindo aplicações web escaláveis
+          com Laravel e tecnologias modernas.
+        </p>
+
+      </div>
+
+      <div class="socials">
+
+        <a href="#">
+          <i class="fa-brands fa-github"></i>
+        </a>
+
+        <a href="#">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+
+        <a href="#">
+          <i class="fa-regular fa-envelope"></i>
+        </a>
+
+      </div>
+
+      <div class="infos">
+
+        <div class="info-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Presidente Prudente, SP</span>
+        </div>
+
+        <div class="info-item">
+          <i class="fa-regular fa-clock"></i>
+          <span id="clock">00:00 UTC -03:00</span>
+        </div>
+
+        <div class="info-item">
+          <i class="fa-brands fa-instagram"></i>
+          <span>_jaoooh</span>
+        </div>
+
+        <div class="info-item">
+          <i class="fa-brands fa-github"></i>
+          <span>github.com/ooaoJ</span>
+        </div>
+
+        <div class="info-item">
+          <i class="fa-brands fa-linkedin"></i>
+          <span>in/joaosperandio</span>
+        </div>
+
+      </div>
+
+      <button class="resume-btn">
+        <i class="fa-solid fa-download"></i>
+        Baixar Currículo
+      </button>
+
+    </aside>
+
+    <!-- MAIN -->
+
+    <main class="content">
+
+      <!-- NAV -->
+
+      <nav class="navbar">
+
+        <div class="nav-links">
+          <a class="active" href="#">Início</a>
+          <a href="#">Sobre</a>
+          <a href="#">Projetos</a>
+          <a href="#">Stack</a>
+          <a href="#">Contato</a>
+        </div>
+
+        <button class="language">
+          🇧🇷 PT
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+
+      </nav>
+
+      <!-- HERO -->
+
+      <section class="hero">
+
+        <div class="hero-content">
+
+          <span class="hero-tag">
+            Olá, eu sou o João 👋
+          </span>
+
+          <h2>
+            Desenvolvedor Backend
+            especialista em <span>Laravel</span>
+          </h2>
+
+          <p>
+            Transformo ideias em aplicações robustas,
+            seguras e escaláveis.
+            Apaixonado por código limpo, performance
+            e boas práticas.
+          </p>
+
+          <div class="hero-buttons">
+
+            <button class="primary-btn">
+              <i class="fa-regular fa-folder"></i>
+              Ver Projetos
+            </button>
+
+            <button class="secondary-btn">
+              <i class="fa-regular fa-paper-plane"></i>
+              Entrar em Contato
+            </button>
+
+          </div>
+
+        </div>
+
+        <div class="hero-logo">
+          <i class="fa-brands fa-laravel"></i>
+        </div>
+
+      </section>
+
+      <!-- ABOUT -->
+
+      <section class="section">
+
+        <div class="section-title">
+          <span class="dot"></span>
+          <h3>Sobre</h3>
+        </div>
+
+        <div class="about-wrapper">
+
+          <div class="about-text">
+            <p>
+              Sou desenvolvedor focado em backend e aplicações web.
+              Tenho experiência com Laravel, MySQL, Vue.js e outras
+              tecnologias do ecossistema web.
+            </p>
+
+            <p>
+              Gosto de resolver problemas, aprender coisas novas
+              e construir projetos que fazem a diferença.
+            </p>
+          </div>
+
+          <div class="about-cards">
+
+            <div class="mini-card">
+              <i class="fa-solid fa-bullseye"></i>
+
+              <div>
+                <strong>Focado em Resultados</strong>
+                <span>Código limpo, performance e escalabilidade.</span>
+              </div>
             </div>
-            <div class="hero-image">
-                <img src="assets/icone.png" alt="Foto de perfil de João Pedro" id="profileImage">
-            </div>
-        </section>
 
-        <section id="skills" class="skills-section">
-            <div class="container">
-                <h2><i class="fa-solid fa-layer-group accent"></i> Minha Stack Tecnológica</h2>
+            <div class="mini-card">
+              <i class="fa-solid fa-book-open"></i>
 
-                <div class="skills-grid">
-                    
-                    <div class="skill-category">
-                        <h3><i class="fa-solid fa-code"></i> FrontEnd</h3>
-                        <div class="tech-list">
-                            <div class="tech-card js-bg"><i class="fa-brands fa-js"></i> JavaScript</div>
-                            <div class="tech-card css-bg"><i class="fa-brands fa-css3-alt"></i> CSS3</div>
-                            <div class="tech-card bootstrap-bg"><i class="fa-brands fa-bootstrap"></i> Bootstrap</div>
-                            <div class="tech-card react-bg"><i class="fa-brands fa-react"></i> React</div>
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <h3><i class="fa-solid fa-server"></i> BackEnd & DB</h3>
-                        <div class="tech-list">
-                            <div class="tech-card php-bg"><i class="fa-brands fa-php"></i> PHP</div>
-                            <div class="tech-card laravel-bg"><i class="fa-brands fa-laravel"></i> Laravel</div>
-                            <div class="tech-card mysql-bg"><i class="fa-solid fa-database"></i> MySQL</div>
-                            <div class="tech-card node-bg"><i class="fa-brands fa-node-js"></i> Node.js</div>
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <h3><i class="fa-solid fa-screwdriver-wrench"></i> Ferramentas</h3>
-                        <div class="tech-list">
-                            <div class="tech-card git-bg"><i class="fa-brands fa-git-alt"></i> Git</div>
-                            <div class="tech-card github-bg"><i class="fa-brands fa-github"></i> GitHub</div>
-                            <div class="tech-card linux-bg"><i class="fa-brands fa-linux"></i> Linux</div>
-                            <div class="tech-card github-bg"><i class="fa-brands fa-debian"></i> Debian</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="projects-section container">
-            <h2><i class="fa-solid fa-folder-open accent"></i> Projetos em Destaque</h2>
-            
-            <div class="projects-grid">
-                
-                <article class="project-card">
-                    <div class="project-image" aria-label="Imagem de demonstração do projeto Espectro"></div>
-                    <div class="project-info">
-                        <h3>Espectro</h3>
-                        <p class="project-desc">Aplicação Fullstack interativa desenvolvida com foco em edução, mostrando um espectro eletromagnético dinâmico.</p>
-                        <div class="project-tags">
-                            <span>#JavaScript</span>
-                            <span>#PHP/Backend</span>
-                            <span>#Educação</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/ooaoJ/spectro" target="_blank" class="link-github"><i class="fa-brands fa-github"></i> Código</a>
-                            <a href="#" target="_blank" class="link-demo"><i class="fa-solid fa-eye"></i> Demo</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-image" aria-label="Imagem de demonstração do Sistema de Calendário">
-                        
-
-[Image of Calendar Application Interface]
-
-                    </div>
-                    <div class="project-info">
-                        <h3>Sistema de Calendário</h3>
-                        <p class="project-desc">Sistema de agendamento e registro de eventos, integrando manipulação de datas no FrontEnd e persistência de dados no BackEnd.</p>
-                        <div class="project-tags">
-                            <span>#PHP/Laravel</span>
-                            <span>#MySQL</span>
-                            <span>#JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/ooaoJ/calendar-senai" target="_blank" class="link-github"><i class="fa-brands fa-github"></i> Código</a>
-                            <a href="#" target="_blank" class="link-demo"><i class="fa-solid fa-eye"></i> Demo</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-image" aria-label="Imagem de demonstração do jogo PokeJS"></div>
-                    <div class="project-info">
-                        <h3>PokeJS (GameDev)</h3>
-                        <p class="project-desc">Desenvolvimento de um jogo de aventura baseado em Pokémon, focado em manipulação do DOM e lógica de jogo complexa em JavaScript puro.</p>
-                        <div class="project-tags">
-                            <span>#JavaScript</span>
-                            <span>#GameDev</span>
-                            <span>#EmDesenvolvimento</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/ooaoJ/PokeJS" target="_blank" class="link-github"><i class="fa-brands fa-github"></i> Código</a>
-                            <a href="#" target="_blank" class="link-demo"><i class="fa-solid fa-eye"></i> Demo</a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <section id="contact" class="contact-section container">
-            <div class="contact-info">
-                <h2><i class="fa-solid fa-headset accent"></i> Vamos Construir Algo?</h2>
-                <p>Estou aberto a novas oportunidades e projetos. Entre em contato para discutirmos como minhas habilidades Fullstack podem agregar valor ao seu time ou ideia.</p>
-
-                <div class="contact-links">
-                    <a href="https://www.linkedin.com/in/jpsperandio/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-                    <a href="https://github.com/ooaoJ" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-                    <a href="mailto:jpbentosperandio@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
-                </div>
+              <div>
+                <strong>Sempre Aprendendo</strong>
+                <span>Estudando novas tecnologias constantemente.</span>
+              </div>
             </div>
 
-            <div class="education-info">
-                <h3><i class="fa-solid fa-graduation-cap accent"></i> Formação</h3>
-                <div class="education-card">
-                    <p class="title">Técnico em Desenvolvimento de Sistemas</p>
-                    <p class="institution">SENAI</p>
-                    <p class="period">2024 - 2025</p>
-                </div>
+            <div class="mini-card">
+              <i class="fa-solid fa-code"></i>
+
+              <div>
+                <strong>Desenvolvedor Completo</strong>
+                <span>Do backend ao frontend, do banco à interface.</span>
+              </div>
             </div>
-        </section>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- PROJECTS -->
+
+      <section class="section">
+
+        <div class="projects-header">
+
+          <div class="section-title">
+            <span class="dot"></span>
+            <h3>Projetos</h3>
+          </div>
+
+          <a href="#" class="github-link">
+            Ver todos no GitHub
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+
+        </div>
+
+        <div class="projects-grid">
+
+          <div class="project-card">
+
+            <div class="project-icon">
+              <i class="fa-regular fa-newspaper"></i>
+            </div>
+
+            <h4>Painel de Notícias</h4>
+
+            <span class="tag">Laravel</span>
+
+            <p>
+              Sistema com autenticação, gerenciamento
+              de matérias e aprovação de conteúdo.
+            </p>
+
+            <div class="project-links">
+              <a href="#">Ver Projeto</a>
+              <a href="#">GitHub</a>
+            </div>
+
+          </div>
+
+          <div class="project-card">
+
+            <div class="project-icon">
+              <i class="fa-solid fa-question"></i>
+            </div>
+
+            <h4>Quiz Vue.js</h4>
+
+            <span class="tag">Vue.js</span>
+
+            <p>
+              Aplicação consumindo API externa com
+              sistema de pontuação e perguntas dinâmicas.
+            </p>
+
+            <div class="project-links">
+              <a href="#">Ver Projeto</a>
+              <a href="#">GitHub</a>
+            </div>
+
+          </div>
+
+          <div class="project-card">
+
+            <div class="project-icon">
+              <i class="fa-solid fa-gamepad"></i>
+            </div>
+
+            <h4>Projeto Roblox</h4>
+
+            <span class="tag">Lua</span>
+
+            <p>
+              Desenvolvimento de interfaces e sistemas
+              interativos no Roblox Studio.
+            </p>
+
+            <div class="project-links">
+              <a href="#">Ver Projeto</a>
+              <a href="#">GitHub</a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- STACK -->
+
+      <section class="section">
+
+        <div class="section-title">
+          <span class="dot"></span>
+          <h3>Stack</h3>
+        </div>
+
+        <div class="stack-grid">
+
+          <div class="stack-item active-stack">
+            <i class="fa-brands fa-laravel"></i>
+            <span>Laravel</span>
+          </div>
+
+          <div class="stack-item">
+            <i class="fa-brands fa-php"></i>
+            <span>PHP</span>
+          </div>
+
+          <div class="stack-item">
+            <i class="fa-brands fa-vuejs"></i>
+            <span>Vue.js</span>
+          </div>
+
+          <div class="stack-item">
+            <i class="fa-brands fa-js"></i>
+            <span>JavaScript</span>
+          </div>
+
+          <div class="stack-item">
+            <i class="fa-solid fa-database"></i>
+            <span>MySQL</span>
+          </div>
+
+          <div class="stack-item">
+            <i class="fa-brands fa-git-alt"></i>
+            <span>Git</span>
+          </div>
+
+          <div class="stack-item">
+            <i class="fa-solid fa-wind"></i>
+            <span>Tailwind</span>
+          </div>
+
+          <div class="stack-item">
+            <i class="fa-brands fa-html5"></i>
+            <span>HTML5</span>
+          </div>
+
+          <div class="stack-item">
+            <i class="fa-brands fa-css3-alt"></i>
+            <span>CSS3</span>
+          </div>
+
+        </div>
+
+      </section>
+
+      <footer>
+        <p>
+          <i class="fa-regular fa-heart"></i>
+          Feito com paixão por João Sperandio
+        </p>
+
+        <span>
+          © 2025 Todos os direitos reservados.
+        </span>
+      </footer>
+
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 João Pedro. Desenvolvido com carinho e código.</p>
-        </div>
-    </footer>
+  </div>
 
-    <script src="js/script.js"></script>
+  <script src="script.js"></script>
+
 </body>
 </html>
-
