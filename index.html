@@ -1,238 +1,296 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de João Pedro Bento Sperandio, desenvolvedor backend com foco em PHP, Laravel, APIs REST e bancos de dados.">
+    <title>João Pedro Bento Sperandio | Backend Developer</title>
 
-  <link rel="stylesheet" href="style.css">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-  />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css">
 </head>
 <body>
+    <div class="background-grid"></div>
 
-  <nav>
-    <div class="container nav-content">
+    <header class="navbar">
+        <div class="container nav-content">
+            <a href="#home" class="brand">JP<span>.</span></a>
 
-      <h2 class="logo">
-        João<span>.</span>
-      </h2>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+                <i class="bi bi-list"></i>
+            </button>
 
-      <div class="links">
-        <a href="#about">Sobre</a>
-        <a href="#stack">Stacks</a>
-        <a href="#projects">Projetos</a>
-        <a href="#contact">Contato</a>
-      </div>
+            <nav class="nav-links" id="navLinks">
+                <a href="#about" data-i18n="nav.about">Sobre</a>
+                <a href="#stack" data-i18n="nav.stack">Stack</a>
+                <a href="#projects" data-i18n="nav.projects">Projetos</a>
+                <a href="#education" data-i18n="nav.education">Formação</a>
+                <a href="#competition" data-i18n="nav.competition">Competição</a>
+                <a href="#contact" data-i18n="nav.contact">Contato</a>
+            </nav>
 
-    </div>
-  </nav>
-
-  <header>
-    <div class="container hero">
-
-      <div class="tag">
-        <i class="fa-solid fa-code"></i>
-        Backend Developer • Laravel
-      </div>
-
-      <h1>
-        Desenvolvendo aplicações modernas com
-        <span>Laravel</span>
-      </h1>
-
-      <p>
-        Desenvolvedor focado em backend, APIs e sistemas modernos.
-      </p>
-
-      <div class="buttons">
-
-        <a href="#projects" class="btn primary">
-          <i class="fa-solid fa-layer-group"></i>
-          Projetos
-        </a>
-
-        <a href="#contact" class="btn secondary">
-          <i class="fa-solid fa-envelope"></i>
-          Contato
-        </a>
-
-      </div>
-
-    </div>
-  </header>
-
-  <section id="about">
-    <div class="container">
-
-      <h2 class="title">
-        Sobre <span>mim</span>
-      </h2>
-
-      <p class="about-text">
-        Sou um desenvolvedor apaixonado por backend e arquitetura web,
-        criando sistemas modernos com Laravel, Vue.js e JavaScript.
-      </p>
-
-    </div>
-  </section>
-
-  <section id="stack">
-    <div class="container">
-
-      <h2 class="title">
-        Minhas <span>Stacks</span>
-      </h2>
-
-      <div class="grid">
-
-        <div class="card">
-          <i class="fa-brands fa-laravel"></i>
-          Laravel
+            <button class="language-toggle" id="languageToggle" aria-label="Trocar idioma">
+                <i class="bi bi-translate"></i>
+                <span id="currentLanguage">PT</span>
+            </button>
         </div>
+    </header>
 
-        <div class="card">
-          <i class="fa-brands fa-php"></i>
-          PHP
+    <main>
+        <section class="hero section" id="home">
+            <div class="container hero-grid">
+                <div class="hero-copy reveal">
+                    <div class="eyebrow">
+                        <span class="status-dot"></span>
+                        <span data-i18n="hero.available">Disponível para oportunidades e novos projetos</span>
+                    </div>
+
+                    <p class="hero-kicker" data-i18n="hero.kicker">DESENVOLVEDOR BACKEND</p>
+                    <h1>João Pedro<br><span>Bento Sperandio</span></h1>
+                    <p class="hero-description" data-i18n="hero.description">
+                        Desenvolvedor focado em backend, APIs REST e bancos de dados, criando aplicações organizadas, escaláveis e com experiências simples para quem usa.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="bi bi-grid-1x2-fill"></i>
+                            <span data-i18n="hero.projectsButton">Ver projetos</span>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="bi bi-send"></i>
+                            <span data-i18n="hero.contactButton">Entrar em contato</span>
+                        </a>
+                    </div>
+
+                    <div class="hero-socials">
+                        <a href="https://github.com/SEU-USUARIO" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                        <a href="https://www.linkedin.com/in/SEU-USUARIO" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="mailto:SEU-EMAIL@EXEMPLO.COM" aria-label="E-mail"><i class="bi bi-envelope-fill"></i></a>
+                    </div>
+                </div>
+
+                <div class="hero-visual reveal">
+                    <div class="terminal-card">
+                        <div class="terminal-topbar">
+                            <div class="terminal-dots"><span></span><span></span><span></span></div>
+                            <p>developer.profile</p>
+                            <i class="bi bi-code-slash"></i>
+                        </div>
+                        <div class="terminal-body">
+                            <p><span class="code-key">const</span> <span class="code-var">developer</span> = {</p>
+                            <p class="indent"><span class="code-prop">name</span>: <span class="code-string">"João Pedro"</span>,</p>
+                            <p class="indent"><span class="code-prop">role</span>: <span class="code-string">"Backend Developer"</span>,</p>
+                            <p class="indent"><span class="code-prop">focus</span>: [</p>
+                            <p class="indent-2"><span class="code-string">"Laravel"</span>, <span class="code-string">"REST APIs"</span>,</p>
+                            <p class="indent-2"><span class="code-string">"Databases"</span>, <span class="code-string">"Automation"</span></p>
+                            <p class="indent">],</p>
+                            <p class="indent"><span class="code-prop">learning</span>: <span class="code-boolean">true</span></p>
+                            <p>};</p>
+                        </div>
+                    </div>
+
+                    <div class="floating-stat stat-one">
+                        <i class="bi bi-code-square"></i>
+                        <div><strong>2023</strong><span data-i18n="hero.started">Início na programação</span></div>
+                    </div>
+                    <div class="floating-stat stat-two">
+                        <i class="bi bi-braces"></i>
+                        <div><strong>Backend</strong><span data-i18n="hero.focus">Foco principal</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="about">
+            <div class="container two-column">
+                <div class="section-heading reveal">
+                    <span class="section-number">01</span>
+                    <p class="section-label" data-i18n="about.label">SOBRE MIM</p>
+                    <h2 data-i18n="about.title">Código com propósito, não só por aparência.</h2>
+                </div>
+                <div class="about-content reveal">
+                    <p data-i18n="about.p1">
+                        Comecei a programar em 2023 e desde então venho direcionando meus estudos para desenvolvimento backend, arquitetura de aplicações, APIs REST e bancos de dados.
+                    </p>
+                    <p data-i18n="about.p2">
+                        Gosto de transformar problemas reais em sistemas úteis: automações, integrações, ferramentas internas, plataformas web e projetos que conectam software a dispositivos físicos.
+                    </p>
+                    <div class="about-tags">
+                        <span><i class="bi bi-check2-circle"></i> APIs REST</span>
+                        <span><i class="bi bi-check2-circle"></i> MVC</span>
+                        <span><i class="bi bi-check2-circle"></i> MySQL</span>
+                        <span><i class="bi bi-check2-circle"></i> Git</span>
+                        <span><i class="bi bi-check2-circle"></i> Linux</span>
+                        <span><i class="bi bi-check2-circle"></i> Automação</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="stack">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="section-number">02</span>
+                    <p class="section-label" data-i18n="stack.label">TECNOLOGIAS</p>
+                    <h2 data-i18n="stack.title">Minha stack e ferramentas do dia a dia.</h2>
+                </div>
+
+                <div class="stack-grid reveal">
+                    <div class="stack-card"><i class="fa-brands fa-php"></i><span>PHP</span></div>
+                    <div class="stack-card"><i class="fa-brands fa-laravel"></i><span>Laravel</span></div>
+                    <div class="stack-card"><i class="fa-brands fa-python"></i></i><span>Python</span></div>
+                    <div class="stack-card"><i class="bi bi-lightning-charge"></i><span>FastAPI</span></div>
+                    <div class="stack-card"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
+                    <div class="stack-card"><i class="bi bi-database"></i><span>MySQL</span></div>
+                    <div class="stack-card"><i class="bi bi-git"></i><span>Git</span></div>
+                    <div class="stack-card"><i class="bi bi-github"></i><span>GitHub</span></div>
+                    <div class="stack-card"><i class="bi bi-terminal"></i><span>Linux</span></div>
+                    <div class="stack-card"><i class="bi bi-bootstrap"></i><span>Bootstrap</span></div>
+                    <div class="stack-card"><i class="bi bi-braces-asterisk"></i><span>REST API</span></div>
+                    <div class="stack-card"><i class="bi bi-send"></i><span>Postman</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="projects">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="section-number">03</span>
+                    <p class="section-label" data-i18n="projects.label">PROJETOS</p>
+                    <h2 data-i18n="projects.title">Projetos que representam como eu trabalho.</h2>
+                </div>
+
+                <div class="projects-grid">
+                    <article class="project-card featured reveal">
+                        <div class="project-top">
+                            <span class="project-badge" data-i18n="projects.featured">Destaque</span>
+                            <div class="project-links">
+                                <a href="https://github.com/SEU-USUARIO" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                                <a href="#" aria-label="Abrir projeto"><i class="bi bi-box-arrow-up-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-icon"><i class="bi bi-search-heart"></i></div>
+                        <h3>CotasMart</h3>
+                        <p data-i18n="projects.cotasmart">Plataforma SaaS de pesquisa e comparação de preços com interpretação de busca por IA, catálogo próprio, histórico de preços, assinatura e integração com fontes externas.</p>
+                        <div class="project-stack"><span>Laravel</span><span>PHP</span><span>MySQL</span><span>IA</span><span>APIs</span></div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-top">
+                            <span class="project-badge muted">Python</span>
+                            <div class="project-links"><a href="https://github.com/SEU-USUARIO" target="_blank"><i class="bi bi-github"></i></a></div>
+                        </div>
+                        <div class="project-icon"><i class="bi bi-robot"></i></div>
+                        <h3 data-i18n="projects.automationTitle">Automação de Publicações</h3>
+                        <p data-i18n="projects.automation">Automação em Python para validação, sincronização e publicação de documentos, com Playwright, conversão de arquivos e geração de relatórios.</p>
+                        <div class="project-stack"><span>Python</span><span>Playwright</span><span>Regex</span><span>Automation</span></div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-top">
+                            <span class="project-badge muted">Laravel</span>
+                            <div class="project-links"><a href="https://github.com/SEU-USUARIO" target="_blank"><i class="bi bi-github"></i></a></div>
+                        </div>
+                        <div class="project-icon"><i class="bi bi-receipt-cutoff"></i></div>
+                        <h3 data-i18n="projects.budgetTitle">Sistema de Orçamentos</h3>
+                        <p data-i18n="projects.budget">Sistema web para cadastro de itens, três cotações, comparação automática e histórico, com recursos de IA para auxiliar descrições e organização.</p>
+                        <div class="project-stack"><span>Laravel</span><span>MySQL</span><span>Bootstrap</span><span>IA</span></div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-top">
+                            <span class="project-badge muted">IoT</span>
+                            <div class="project-links"><a href="https://github.com/SEU-USUARIO" target="_blank"><i class="bi bi-github"></i></a></div>
+                        </div>
+                        <div class="project-icon"><i class="bi bi-cpu"></i></div>
+                        <h3 data-i18n="projects.iotTitle">ESP32 + MQTT</h3>
+                        <p data-i18n="projects.iot">Projeto IoT integrando ESP32, MQTT, aplicação web e controle de dispositivos, com comandos em tempo real, logs e interface de acompanhamento.</p>
+                        <div class="project-stack"><span>ESP32</span><span>MQTT</span><span>Laravel</span><span>C++</span></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="education">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="section-number">04</span>
+                    <p class="section-label" data-i18n="education.label">FORMAÇÃO</p>
+                    <h2 data-i18n="education.title">Minha base acadêmica e técnica.</h2>
+                </div>
+
+                <div class="timeline reveal">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"><i class="bi bi-mortarboard-fill"></i></div>
+                        <div class="timeline-content">
+                            <span class="timeline-type" data-i18n="education.degree">Graduação</span>
+                            <h3>Análise e Desenvolvimento de Sistemas</h3>
+                            <p>UNOESTE</p>
+                            <span class="timeline-date">2026 — <span data-i18n="education.current">Atual</span></span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"><i class="bi bi-laptop-fill"></i></div>
+                        <div class="timeline-content">
+                            <span class="timeline-type" data-i18n="education.technical">Curso Técnico</span>
+                            <h3>Desenvolvimento de Sistemas</h3>
+                            <p>SENAI</p>
+                            <span class="timeline-date" data-i18n="education.completed">Concluído / em formação técnica</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section competition-section" id="competition">
+            <div class="container competition-card reveal">
+                <div class="competition-copy">
+                    <span class="competition-pill"><i class="bi bi-trophy-fill"></i> SPSKILLS</span>
+                    <p class="section-label" data-i18n="competition.label">COMPETIÇÃO</p>
+                    <h2 data-i18n="competition.title">Desenvolvimento Web sob pressão, precisão e tempo.</h2>
+                    <p data-i18n="competition.description">Participação em seletivas e simulados da modalidade Desenvolvimento Web, trabalhando fidelidade visual, responsividade, PHP, JavaScript, sessões, JSON, APIs, banco de dados e resolução rápida de problemas.</p>
+                    <div class="competition-highlights">
+                        <span><i class="bi bi-stopwatch-fill"></i> Speed tests</span>
+                        <span><i class="bi bi-window-stack"></i> Front-end responsivo</span>
+                        <span><i class="bi bi-server"></i> Backend PHP</span>
+                        <span><i class="bi bi-database-fill-gear"></i> MySQL</span>
+                    </div>
+                </div>
+                <div class="competition-visual">
+                    <i class="bi bi-trophy"></i>
+                    <strong>SPSKILLS</strong>
+                    <span>Web Development</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="contact">
+            <div class="container contact-card reveal">
+                <div>
+                    <p class="section-label" data-i18n="contact.label">CONTATO</p>
+                    <h2 data-i18n="contact.title">Tem um projeto ou oportunidade? Vamos conversar.</h2>
+                    <p data-i18n="contact.description">Estou aberto a oportunidades de desenvolvimento, projetos, colaboração e networking.</p>
+                </div>
+                <div class="contact-links">
+                    <a href="mailto:SEU-EMAIL@EXEMPLO.COM"><i class="bi bi-envelope-fill"></i><span>SEU-EMAIL@EXEMPLO.COM</span></a>
+                    <a href="https://github.com/SEU-USUARIO" target="_blank"><i class="bi bi-github"></i><span>github.com/SEU-USUARIO</span></a>
+                    <a href="https://www.linkedin.com/in/SEU-USUARIO" target="_blank"><i class="bi bi-linkedin"></i><span>linkedin.com/in/SEU-USUARIO</span></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>© <span id="currentYear"></span> João Pedro Bento Sperandio.</p>
+            <a href="#home"><span data-i18n="footer.back">Voltar ao topo</span> <i class="bi bi-arrow-up"></i></a>
         </div>
+    </footer>
 
-        <div class="card">
-          <i class="fa-brands fa-vuejs"></i>
-          Vue.js
-        </div>
-
-        <div class="card">
-          <i class="fa-brands fa-js"></i>
-          JavaScript
-        </div>
-
-        <div class="card">
-          <i class="fa-solid fa-database"></i>
-          MySQL
-        </div>
-
-        <div class="card">
-          <i class="fa-brands fa-git-alt"></i>
-          Git
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <section id="projects">
-    <div class="container">
-
-      <h2 class="title">
-        Projetos <span>Recentes</span>
-      </h2>
-
-      <div class="projects">
-
-        <div class="project">
-          <i class="fa-solid fa-newspaper"></i>
-
-          <h3>Painel de Notícias</h3>
-
-          <p>
-            Sistema administrativo com autenticação e aprovação de conteúdo.
-          </p>
-        </div>
-
-        <div class="project">
-          <i class="fa-solid fa-city"></i>
-
-          <h3>Cities Resources</h3>
-
-          <p>
-            Projeto para explorar conceitos de backend e arquitetura.
-          </p>
-        </div>
-
-        <div class="project">
-          <i class="fa-solid fa-gamepad"></i>
-
-          <h3>Quiz Vue.js</h3>
-
-          <p>
-            Aplicação consumindo APIs externas com interface dinâmica.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="container">
-
-      <h2 class="title">
-        Entre em <span>Contato</span>
-      </h2>
-
-      <div class="contact-box">
-
-        <a href="#" class="contact-item">
-          <i class="fa-brands fa-github"></i>
-          GitHub
-        </a>
-
-        <a href="#" class="contact-item">
-          <i class="fa-brands fa-linkedin"></i>
-          LinkedIn
-        </a>
-
-        <a href="#" class="contact-item">
-          <i class="fa-brands fa-instagram"></i>
-          Instagram
-        </a>
-
-        <a href="#" class="contact-item">
-          <i class="fa-solid fa-envelope"></i>
-          Email
-        </a>
-
-      </div>
-
-    </div>
-  </section>
-
-  <footer>
-    <div class="container footer-content">
-
-      <p>
-        © 2026 João. Todos os direitos reservados.
-      </p>
-
-      <div class="footer-icons">
-
-        <a href="#">
-          <i class="fa-brands fa-github"></i>
-        </a>
-
-        <a href="#">
-          <i class="fa-brands fa-linkedin"></i>
-        </a>
-
-        <a href="#">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-
-      </div>
-
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
