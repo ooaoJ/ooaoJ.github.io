@@ -5,7 +5,11 @@ const translations = {
       available: 'Disponível para oportunidades e novos projetos',
       kicker: 'DESENVOLVEDOR BACKEND',
       description: 'Desenvolvedor focado em backend, APIs REST e bancos de dados, criando aplicações organizadas, escaláveis e com experiências simples para quem usa.',
-      projectsButton: 'Ver projetos', contactButton: 'Entrar em contato', started: 'Início na programação', focus: 'Foco principal'
+      projectsButton: 'Ver projetos',
+      contactButton: 'Entrar em contato',
+      resumeButton: 'Baixar currículo',
+      started: 'Início na programação',
+      focus: 'Foco principal'
     },
     about: {
       label: 'SOBRE MIM', title: 'Código com propósito, não só por aparência.',
@@ -31,9 +35,14 @@ const translations = {
   en: {
     nav: { about: 'About', stack: 'Stack', projects: 'Projects', education: 'Education', competition: 'Competition', contact: 'Contact' },
     hero: {
-      available: 'Open to opportunities and new projects', kicker: 'BACKEND DEVELOPER',
+      available: 'Open to opportunities and new projects',
+      kicker: 'BACKEND DEVELOPER',
       description: 'Backend developer focused on REST APIs and databases, building organized, scalable applications with simple experiences for users.',
-      projectsButton: 'View projects', contactButton: 'Get in touch', started: 'Started coding', focus: 'Main focus'
+      projectsButton: 'View projects',
+      contactButton: 'Get in touch',
+      resumeButton: 'Download resume',
+      started: 'Started coding',
+      focus: 'Main focus'
     },
     about: {
       label: 'ABOUT ME', title: 'Code with purpose, not just appearance.',
@@ -62,13 +71,32 @@ let currentLanguage = localStorage.getItem('portfolio-language') || 'pt';
 
 function translatePage() {
   document.documentElement.lang = currentLanguage === 'pt' ? 'pt-BR' : 'en';
-  document.getElementById('currentLanguage').textContent = currentLanguage.toUpperCase();
+
+  document.getElementById('currentLanguage').textContent =
+    currentLanguage.toUpperCase();
+
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const keys = el.dataset.i18n.split('.');
     let value = translations[currentLanguage];
+
     keys.forEach(key => value = value?.[key]);
-    if (value) el.textContent = value;
+
+    if (value) {
+      el.textContent = value;
+    }
   });
+
+  const resumeDownload = document.getElementById('resumeDownload');
+
+  if (resumeDownload) {
+    if (currentLanguage === 'pt') {
+      resumeDownload.href = 'assets/curriculo.pdf';
+      resumeDownload.download = 'Curriculo_Joao_Pedro_Sperandio.pdf';
+    } else {
+      resumeDownload.href = 'assets/resume.pdf';
+      resumeDownload.download = 'Joao_Pedro_Sperandio_Resume.pdf';
+    }
+  }
 }
 
 document.getElementById('languageToggle').addEventListener('click', () => {
